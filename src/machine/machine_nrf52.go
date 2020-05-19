@@ -153,6 +153,10 @@ var (
 	pwmChannelSequence [3]uint16
 )
 
+type PWM struct {
+	Pin Pin
+}
+
 // InitPWM initializes the registers needed for PWM.
 func InitPWM() {
 	return

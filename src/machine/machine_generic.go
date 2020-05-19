@@ -84,6 +84,10 @@ func (adc ADC) Get() uint16 {
 //export __tinygo_adc_read
 func adcRead(pin Pin) uint16
 
+type PWM struct {
+	Pin Pin
+}
+
 // InitPWM enables support for PWM peripherals.
 func InitPWM() {
 	// Nothing to do here.

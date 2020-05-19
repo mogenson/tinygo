@@ -21,6 +21,10 @@ func (p Pin) getPortMask() (*volatile.Register8, uint8) {
 	}
 }
 
+type PWM struct {
+	Pin Pin
+}
+
 // InitPWM initializes the registers needed for PWM.
 func InitPWM() {
 	// use waveform generation

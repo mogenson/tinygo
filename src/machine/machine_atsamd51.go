@@ -1463,6 +1463,10 @@ const (
 // PWM
 const period = 0xFFFF
 
+type PWM struct {
+	Pin Pin
+}
+
 // Configure configures a PWM pin for output.
 func (pwm PWM) Configure() error {
 	// Set pin as output
