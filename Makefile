@@ -146,7 +146,7 @@ gen-device-stm32: build/gen-device-svd
 
 # Get LLVM sources.
 $(LLVM_PROJECTDIR)/README.md:
-	git clone -b xtensa_release_10.0.1 --depth=1 https://github.com/tinygo-org/llvm-project $(LLVM_PROJECTDIR)
+	git clone -b xtensa_release_11.0.0 --depth=1 https://github.com/tinygo-org/llvm-project $(LLVM_PROJECTDIR)
 llvm-source: $(LLVM_PROJECTDIR)/README.md
 
 # Configure LLVM.
