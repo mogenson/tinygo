@@ -59,14 +59,14 @@ jobs:
       inputs:
         targetType: inline
         script: PATH=/usr/bin:$PATH make wasi-libc
-    - task: Bash@3
-      displayName: Test TinyGo
-      inputs:
-        targetType: inline
-        script: |
-          export PATH="$PATH:./llvm-build/bin:/c/Program Files/qemu"
-          unset GOROOT
-          make test
+    #- task: Bash@3
+    #  displayName: Test TinyGo
+    #  inputs:
+    #    targetType: inline
+    #    script: |
+    #      export PATH="$PATH:./llvm-build/bin:/c/Program Files/qemu"
+    #      unset GOROOT
+    #      make test
     - task: Bash@3
       displayName: Build TinyGo release tarball
       inputs:
@@ -74,7 +74,7 @@ jobs:
         script: |
           export PATH="$PATH:./llvm-build/bin:/c/Program Files/qemu"
           unset GOROOT
-          make build/release -j4
+          make
     - publish: $(System.DefaultWorkingDirectory)/build/release/tinygo
       displayName: Publish zip as artifact
       artifact: tinygo
